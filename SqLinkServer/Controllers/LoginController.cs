@@ -29,8 +29,6 @@ namespace SqLinkServer.Controllers
         [HttpPost]
         [Route("login")]
 
-
-
         public LoginResponse Login([FromBody] LoginRequest userLogin)
         {
             LoginResponse loginResponse;
@@ -40,9 +38,8 @@ namespace SqLinkServer.Controllers
                 return user;
             }
             catch (Exception ex)
-            {
-
-
+            {   
+                //to do write to log
                 Debug.Print(ex.ToString());
                 return null;
             }

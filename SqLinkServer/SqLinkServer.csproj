@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <Folder Include="DataDB\" />
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>

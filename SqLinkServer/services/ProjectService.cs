@@ -12,8 +12,7 @@ namespace SqLinkServer.services
 
         public GetAllProjectsResponse GetAllProjectsByUserId(int userId)
         {
-            List<Project> projects = _projectsContext.Projects.Where(p => p.UserId == userId
-            ).ToList();
+            List<Project> projects = _projectsContext.Projects.Where(p => p.UserId == userId).ToList();
             GetAllProjectsResponse response = new GetAllProjectsResponse();
             response.projects = projects;
             return response;

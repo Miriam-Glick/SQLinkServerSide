@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SqLinkServer.Models;
 using SqLinkServer.services;
+using System.Diagnostics;
 
 namespace SqLinkServer.Controllers
 {
@@ -18,8 +19,9 @@ namespace SqLinkServer.Controllers
 
         }
 
-        [AllowAnonymous]
+
         [HttpPost]
+        [Route("login")]
         public GetAllProjectsResponse GetAllProjectsByUserId(int userId)
         {
             try 
@@ -30,7 +32,7 @@ namespace SqLinkServer.Controllers
            
             catch (Exception ex) 
             {
-                
+                Debug.Write(ex);    
                 return null;
             }
 
